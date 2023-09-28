@@ -15,6 +15,7 @@ function RegularForm() {
       password: "",
       phone: "",
     },
+    criteriaMode: "all",
   });
   return (
     <form
@@ -36,8 +37,8 @@ function RegularForm() {
           })}
           placeholder="Enter UserName"
         />
-        {/* <ErrorMessage
-          name="email"
+        <ErrorMessage
+          name="username"
           errors={errors}
           render={({ messages }) =>
             messages &&
@@ -45,8 +46,8 @@ function RegularForm() {
               <p key={type}>{message}</p>
             ))
           }
-        /> */}
-        {errors.username && <span>{errors.username.message}</span>}
+        />
+        {/* {errors.username && <span>{errors.username.message}</span>} */}
       </div>
 
       <div>
@@ -62,7 +63,7 @@ function RegularForm() {
           })}
           placeholder="Enter Email"
         />
-        {/* <ErrorMessage
+        <ErrorMessage
           name="email"
           errors={errors}
           render={({ messages }) =>
@@ -71,8 +72,8 @@ function RegularForm() {
               <p key={type}>{message}</p>
             ))
           }
-        /> */}
-        {errors.email && <span>{errors.email.message}</span>}
+        />
+        {/* {errors.email && <span>{errors.email.message}</span>} */}
       </div>
       <div>
         <input
@@ -89,7 +90,7 @@ function RegularForm() {
           })}
           placeholder="Enter Password"
         />
-        {/* <ErrorMessage
+        <ErrorMessage
           name="password"
           errors={errors}
           render={({ messages }) =>
@@ -98,9 +99,9 @@ function RegularForm() {
               <p key={type}>{message}</p>
             ))
           }
-        /> */}
+        />
 
-        {errors.password && <span>{errors.password.message}</span>}
+        {/* {errors.password && <span>{errors.password.message}</span>} */}
       </div>
       <div>
         <input
@@ -115,7 +116,7 @@ function RegularForm() {
           })}
           placeholder="Enter a phone number"
         />
-        {/* <ErrorMessage
+        <ErrorMessage
           name="phone"
           errors={errors}
           render={({ messages }) =>
@@ -124,9 +125,9 @@ function RegularForm() {
               <p key={type}>{message}</p>
             ))
           }
-        /> */}
+        />
 
-        {errors.phone && <span>{errors.phone.message}</span>}
+        {/* {errors.phone && <span>{errors.phone.message}</span>} */}
       </div>
       <button type="submit">Submit</button>
     </form>
